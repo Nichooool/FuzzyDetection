@@ -1,7 +1,7 @@
 import javax.imageio.*;
 import java.awt.image.*;
 import java.io.*;
-public class FuzzyDetectionCopy {
+public class FuzzyDetection {
 
   int mWidth, mHeight;
 
@@ -9,7 +9,7 @@ public class FuzzyDetectionCopy {
     if(args == null) {
       return ;
     }
-    FuzzyDetectionCopy fuzzyDetection = new FuzzyDetectionCopy();
+    FuzzyDetection fuzzyDetection = new FuzzyDetection();
     String path = args[0];
     File[] files = fuzzyDetection.getFiles(path);
     if (files == null) {
@@ -59,7 +59,7 @@ public class FuzzyDetectionCopy {
   }
 
   /**
-  * 将颜色转换成arb
+  * 将颜色转换成rgb
   */
   private int colorToRGB(int alpha, int red, int green, int blue) {
     int newPixel = 0;
@@ -75,7 +75,7 @@ public class FuzzyDetectionCopy {
   }
 
   /**
-  * 将颜色转换成arb
+  * 将图片转换成灰度图数组
   */
   private int[] grayImage(BufferedImage image) {
     int width = mWidth;
