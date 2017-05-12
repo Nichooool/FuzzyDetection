@@ -102,7 +102,7 @@ public class FuzzyDetection {
   * 通过灰度数组与拉卡拉斯算子计算卷积值
   */
   private int[] convolution(int[] gray) {
-      int[] FOUR = new int[] { 0, -1, 0, -1, 4, -1, 0, -1, 0 };
+      int[] lapras = new int[] { 0, -1, 0, -1, 4, -1, 0, -1, 0 };
       int total = mWidth * mHeight;
       int[] output = new int[total];
 
@@ -110,15 +110,15 @@ public class FuzzyDetection {
       int k0 = 0, k1 = 0, k2 = 0;
       int k3 = 0, k4 = 0, k5 = 0;
       int k6 = 0, k7 = 0, k8 = 0;
-      k0 = FOUR[0];
-      k1 = FOUR[1];
-      k2 = FOUR[2];
-      k3 = FOUR[3];
-      k4 = FOUR[4];
-      k5 = FOUR[5];
-      k6 = FOUR[6];
-      k7 = FOUR[7];
-      k8 = FOUR[8];
+      k0 = lapras[0];
+      k1 = lapras[1];
+      k2 = lapras[2];
+      k3 = lapras[3];
+      k4 = lapras[4];
+      k5 = lapras[5];
+      k6 = lapras[6];
+      k7 = lapras[7];
+      k8 = lapras[8];
 
       int sr = 0;
       int r = 0;
